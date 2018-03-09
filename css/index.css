@@ -1,0 +1,1250 @@
+/*公共样式*/
+* {
+	margin: 0;
+	padding: 0;
+}
+ul,li {
+	list-style: none;
+}
+a,input,select,
+select:focus,
+button:active,
+input:focus,
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+	outline: none;
+	border-color: transparent;
+	box-shadow:none;
+}
+
+/*导航 位置切换部分*/
+#header .select-city {
+	position: relative;
+}
+#header .select-lis {
+	position: absolute;
+}
+#header .hiddenlis {
+	display: none;
+}
+
+/*导航 注册部分*/
+#header .noLogin li:nth-child(2) a {
+	color: #ffa200;
+}
+
+/*导航 已登录部分*/
+#header .yesLogin li {
+	position: relative;
+}
+#header .yesLogin li i {
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	position: absolute;
+	top: 5px;
+	left: 52px;
+}
+#header .yesLogin li i img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+#header .yesLogin li span {
+	color: #ffa200;
+	margin-left: 50px;
+}
+
+/*主页部分*/
+/*轮播图部分*/
+#main_ad .goTop {
+	position: absolute;
+	bottom: 140px;
+}
+#main_ad img {
+	width: 100%;
+	height: 600px;
+}
+#main_ad {
+	position: relative;
+}
+
+/*搜索部分*/
+#main_ad .searchForm {
+	width: 100%;
+	height: 25%;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+#main_ad .searchForm .search,
+#select-box .search {
+	width: 60%;
+	height: 33%;
+	margin: 20px auto;
+}
+#main_ad .searchForm .search .search_box,
+#select-box .search .search_box {
+	height: 100%;
+	border: 1px #ffa200 solid;
+	font-size: 20px;
+}
+#main_ad .searchForm .search .search_btn,
+#select-box .search .search_btn {
+	height: 100%;
+	width: 180%;
+	background-color: #ffa200;
+	border: 1px #ffa200 solid;
+	color: #fff0d7;
+	font-size: 20px;
+}
+
+/*context_nav和Introduction公共部分*/
+#context_nav h3,
+#introduction h3 {
+	margin-top: 20px;
+	font-size: 30px;
+	color: #333;
+}
+#context_nav h3 span,
+#introduction h3 span {
+	color: #000;
+	font-weight: bold;
+	margin-right: 10px;
+}
+#context_nav p,
+#introduction p {
+	margin-left: 20px;
+}
+
+/*context_nav部分*/
+#context_nav {
+	margin-top: 20px;
+}
+#context_nav ul li {
+	text-align: center;
+}
+#context_nav ul li img {
+	width: 80px;
+	height: 80px;
+	margin-bottom: 10px;
+
+}
+#context_nav ul li:hover img {
+	animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+@keyframes shake {
+	10%, 90% {
+		transform: translate3d(-1px, 0, 0);
+	}
+	20%, 80% {
+		transform: translate3d(2px, 0, 0);
+	}
+	30%, 50%, 70% {
+		transform: translate3d(-4px, 0, 0);
+	}
+	40%, 60% {
+		transform: translate3d(4px, 0, 0);
+	}
+}
+#context_nav ul li span {
+	display: block;
+	font-size: 18px;
+	color: #000;
+	margin-bottom: 6px;
+}
+#context_nav ul li p {
+	width: 190px;
+	color: #666;
+	margin: 0 auto;
+}
+
+/*Introduction部分*/
+#introduction {
+	background: url("../img/banner.jpg");
+	margin-top: 20px;
+}
+#introduction p a {
+	color: #000;
+}
+#introduction ul li {
+	background-color: #fff;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding: 0;
+	border-radius: 10%;
+	text-align: center;
+	position: relative;
+	margin-left: 10px;
+}
+#introduction ul li a div {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	height: 200px;
+	border-radius: 10% 10% 0 0;
+}
+#introduction ul li a img {
+	width: 100%;
+	height: 100%;
+	margin-bottom: 10px;
+	transition: transform 3s;
+}
+#introduction ul li:hover a img {
+	transform: scale(1.3);
+}
+
+#introduction ul li a h4 {
+	color: #000;
+	margin-bottom: 20px;
+}
+#introduction ul li a p {
+	margin-bottom: 20px;
+	color: #999;
+}
+#introduction ul li a:hover {
+	text-decoration: none;
+}
+#introduction ul li span {
+	position: absolute;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	background-color: #394043;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	padding: 0 8px;
+	top: 150px;
+}
+
+/*二手房部分*/
+/*筛选部分*/
+#main_ad .searchForm .filter {
+	margin: 30px auto;
+	width: 60%;
+}
+#main_ad .searchForm .filter .allSelect div select {
+	font-size: 17px;
+}
+#main_ad .searchForm .filter button {
+	width: 100%;
+	font-size: 16px;
+	background-color: #fff;
+	color: #fa0;
+}
+
+/*内容-排序方式区域*/
+#content .content_rank {
+	border-bottom: 2px #ffa200 solid;
+	margin: 30px 0 20px 0;
+	cursor: pointer;
+}
+#content .content_rank > div {
+	display: block;
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 18px;
+	border: 1px #ffa200 solid;
+	background-color: #fff;
+	border-bottom: 0;
+}
+#content .content_rank > div:hover {
+	background-color: yellow;
+}
+#content .content_rank > div.current {
+	background-color: #ffa200;
+	color: #fff;
+	border: 0;
+}
+#content .result > ul > li:hover {
+	background-color: #f9f9f9;
+}
+/*内容-查询结果区域*/
+#content span {
+	display: block;
+	margin-left: 20px;
+}
+#content .result {
+	margin-top: 5px;
+	padding: 15px;
+	border-top: 1px #e6e6e6 solid;
+	border-bottom: 1px #e6e6e6 solid;
+}
+#content .result li {
+	margin-bottom: 20px;
+	padding-top: 20px;
+}
+#content .result li + li {
+	border-top: 1px #e6e6e6 dashed;
+}
+#content .result .house-details {
+	margin-left: 15px;
+}
+#content .result .house-details > div:nth-child(n+1) {
+	margin-top: 10px;
+}
+/*查询结果-标题*/
+#content .result .house-details div:nth-child(1) a {
+	color: #000;
+	font-size: 18px;
+	font-weight: bold;
+}
+#content .result .house-details > div:nth-child(1) a:hover {
+	color: #ffa200;
+	text-decoration: none;
+}
+/*查询结果-详细信息 小竖线*/
+#content .result .house-details-more > span:nth-child(1),
+#content .result .house-details-more > span:nth-child(2) {
+	position: relative;
+}
+#content .result .house-details-more > span:nth-child(1)::after,
+#content .result .house-details-more > span:nth-child(2)::after {
+	content: "|";
+	position: absolute;
+	right: -11px;
+	top: -1px;
+	color: #999;
+}
+/*查询结果-描述 背景*/
+#content .result .house-details > div:nth-child(4) span {
+	background-color: #ddd;
+	border-radius: 30%;
+	padding: 5px;
+}
+/*查询结果-价格*/
+#content .result .house-price {
+	margin: 25px 50px;
+}
+#content .result .house-price span:first-child {
+	color: #e54b00;
+}
+#content .result .house-price span:last-child {
+	color: #999;
+}
+#content .result .house-price strong {
+	font-size: 24px;
+}
+/*查询结果左侧*/
+#content .myTags li {
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+#content .myTags li i {
+	font-size: 50px;
+	color: #ffa200;
+}
+#content .myTags li p {
+	font-size: 16px;
+	color: #ffa200;
+}
+/*显示更多*/
+#content .show_more {
+	width: 20%;
+	height: 20%;
+	margin: 20px auto;
+	font-size: 16px;
+}
+#content .show_more:hover {
+	color: #ffa200;
+	cursor: pointer;
+}
+/*广告 卖房部分*/
+#content .sell img {
+	width: 100%;
+}
+/*业务流程*/
+#process {
+	margin-top: 40px;
+	background-color: #f8f8f8;
+}
+/*底部*/
+#footer {
+	margin-top: 30px;
+}
+#footer .footer_all{
+	margin: auto;
+}
+/*侧边栏部分*/
+#sideBar {
+	position: fixed;
+	width: 38px;
+    bottom:20px;
+    right: 0;
+    display: none;
+}
+#sideBar li {
+	height: 36px;
+	background-color: #7a6e6e;
+    font-size: 28px;
+    text-align: center;
+}
+#sideBar li + li {
+    border-top:1px solid #DEDEDE;
+}
+#sideBar li:hover,#sideBar li.current {
+    background: #ffa200;
+    font-size: 28px;
+    color: #ED5759;
+    cursor: pointer;
+}
+#sideBar li a {
+	position: relative;
+}
+#sideBar li a div {
+	width: 73px;
+    height: 35px;
+    line-height: 35px;
+    display: inline-block;
+    background: #ffa200;
+    opacity: 1;
+    filter: Alpha(opacity=100);
+    position: absolute;
+    right: 33px;
+    top: -4px;
+    display: none;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
+#sideBar li a:hover div {
+	display: block;
+}
+#sideBar li a i {
+	color: #fff;
+}
+
+/*二手房类型选择部分*/
+#select-box {
+	margin-top: 60px;
+}
+#select-box img {
+	width: 100%;
+}
+#select-box .select-type-box p {
+	font-size: 14px;
+}
+#select-box .select-type-box > div {
+	height: 50px;
+	line-height: 50px;
+}
+#select-box .select-type-box span {
+	font-weight: bold;
+	font-size: 16px;
+}
+#select-box .select-type-box > div {
+	overflow: hidden;
+}
+#select-box .select-type-box a {
+	color: #000;
+	margin-left: 20px;
+}
+#select-box .select-type-box a:hover {
+	color: #ffa200;
+}
+#select-box .select-type-box a.curr {
+	color: #ffa200;
+}
+
+/*登录注册页面*/
+#login-register {
+	width: 33%;
+	margin: 100px auto;
+}
+#login-register > ul {
+	position: relative;
+	left: 150px;
+}
+#login-register #tab-register > div form > div:nth-child(3) input {
+	margin-left: 70px;
+}
+#login-register #tab-register .formtips {
+	position: absolute;
+	color: red;
+}
+#login-register #tab-register .formtips i {
+	color: green;
+	font-size: 20px;
+}
+
+/*详情页面*/
+/*最顶上的信息div*/
+#topDiv{
+	height: 70px;
+	background-color: #ffa200;
+	opacity: 20%;
+	display:none;
+}
+#topDiv ul li {
+	height: 100%;
+	line-height: 70px;
+	font-size: 22px;
+	font-weight: bold;
+	color: #fff;
+}
+#topDiv ul li:nth-child(2) {
+	margin-left: 20px;
+}
+/*概观部分*/
+#overview {
+	margin-top: 25px;
+}
+#overview h2 {
+	font-weight: bold;
+}
+#overview p {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#overview p span {
+	font-size: 20px;
+	margin-right: 30px;
+	position: relative;
+}
+#overview p span:nth-child(1) {
+	font-weight: bold;
+	font-size: 24px;
+	color: #ffa200;
+}
+#overview p span:nth-child(1)::after,
+#overview p span:nth-child(2)::after {
+	content: "|";
+	position: absolute;
+	left: 72px;
+	color: #ccc;
+}
+#overview p span.like {
+	cursor: pointer;
+}
+#overview p span.liked {
+	cursor: pointer;
+	color: #ffa200;
+}
+
+#overview .owner {
+	margin-right: 20px;
+	margin-top: 20px;
+}
+#overview .owner img {
+	width: 150px;
+	height: 150px;
+	margin-right: 20px;
+	border-radius: 20px;
+}
+#overview .owner h5 {
+	font-size: 24px;
+	font-weight: bold;
+}
+#overview .owner p {
+	font-size: 14px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+#overview .owner i {
+	font-size: 28px;
+}
+#overview .owner span {
+	font-weight: bold;
+	font-size: 28px;
+	font-family: 'Tahoma';
+}
+#overview .messages {
+	margin-top: 20px;
+}
+#overview .messages .topArea {
+	padding: 12px 20px;
+	background-color: #999;
+	height: 60px;
+	text-align: center;
+	color: #fff;
+	font-size: 32px;
+	cursor: pointer;
+}
+#overview .messages .txtArea {
+		position: relative;
+		opacity: 0;
+	}
+#overview .messages .txtArea textarea {
+	width:100%;/*自动适应父布局宽度*/
+	overflow:auto;
+	word-break:break-all;
+}
+#overview .messages .txtArea button {
+	position: absolute;
+	right: 0;
+	top: 18px;
+}
+#overview .messages .mess_content ul {
+	border: 1px #ccc solid;
+}
+#overview .messages .mess_content ul li img {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	margin: 5px 10px;
+}
+#overview .messages .mess_content ul li i {
+	margin-top: 10px;
+	margin-right: 10px;
+}
+/*详细信息部分*/
+#details {
+	margin-top: 20px;
+}
+#details .details_title {
+	line-height: 56px;
+	border-bottom: 1px #ccc solid;
+}
+#details .details_title h3 {
+	font-weight: bold;
+	margin-right: 15px;
+}
+#details .details_title p,
+#details .details_title span {
+	margin: 10px 0 0 0;
+	color: #999;
+}
+#details .details_info {
+	padding: 10px 5px;
+}
+#details .details_info ul li {
+	color: #999;
+	height: 35px;
+	line-height: 35px;
+	border-bottom: 1px #ccc solid;
+	font-size: 15px;
+}
+#details .details_info ul li span {
+	color: #000;
+}
+#details .remind {
+	background: url(../img/top-banner.jpg) center center no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+}
+#details .remind {
+	margin-top: 30px;
+	padding: 155px 215px;
+	padding-top: 45px;
+}
+#details .remind > div h4 {
+	color: #ffa200;
+}
+#details .remind > div h4 i {
+	margin-right: 10px;
+}
+#details .remind ul li {
+	color: #999;
+	height: 25px;
+	line-height: 25px;
+}
+#details .same {
+	margin-top: 30px;
+	text-align: center;
+}
+#details .same div {
+	padding: 0 15px;
+}
+#details .same img {
+	width: 100%;
+	height: 150px;
+}
+#details .same h6 {
+	font-size: 14px;
+}
+#details .same p,
+#details .same h6 {
+	padding: 0;
+	margin: 0;
+}
+
+/*卖房页面*/
+#sell {
+	text-align: center;
+	margin-top: 50px;
+}
+#sell h2 {
+	font-weight: bold;
+	margin-top: 70px;
+	margin-bottom: 30px;
+}
+#sell .sell_content {
+	text-align: center;
+	background: url(../img/sell-bg.jpg);
+	padding-top: 30px;
+}
+#sell .sell_content .form-group span {
+	font-size: 18px;
+	margin-top: 5px;
+}
+
+/*个人中心页面*/
+#user_header {
+	margin-top: 50px;
+	background: url(../img/user_bg.png);
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#user_header .userPic {
+	width: 70px;
+	height: 70px;
+	border-radius: 40%;
+	margin-right: 10px;
+}
+#user_header h4 {
+	margin-top: 15px;
+}
+#user_header p {
+	margin-top: 15px;
+	font-size: 12px;
+}
+#user_header p .role {
+	margin-right: 20px;
+}
+#user_header .edit {
+	margin-top: 20px;
+	display: block;
+	cursor: pointer;
+}
+#user_header .edit i {
+	margin-left: 10px;
+}
+#user-body {
+	padding-bottom: 30px;
+	background-color: #f1f1f1;
+}
+#wrapper {
+	height: 500px;
+	background-color: #fff;
+	margin-top: 20px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: left;
+	-webkit-justify-content: left;
+	-ms-flex-pack: left;
+	justify-content: left;
+	overflow: hidden;
+}
+
+#left-side {
+	height: 100%;
+	width: 20%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+#left-side ul li {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 20px;
+	line-height: 34px;
+	color: rgba(51, 51, 51, 0.5);
+	font-weight: 500;
+	cursor: pointer;
+	-webkit-transition: all .2s ease-out;
+	transition: all .2s ease-out;
+}
+#left-side ul li a {
+	color: rgba(51, 51, 51, 0.5);
+}
+#left-side ul li i {
+	margin-top: 8px;
+	font-size: 18px;
+	margin-right: 10px;
+}
+#left-side ul li:hover {
+	color: #333;
+	-webkit-transition: all .2s ease-out;
+	transition: all .2s ease-out;
+}
+#left-side ul li:hover > .icon {
+	fill: #333;
+}
+#left-side ul li.active {
+	color: #333;
+}
+#left-side ul li.active:hover > .icon {
+	fill: #E74C3C;
+}
+
+#border {
+	height: 288px;
+	width: 1px;
+	background-color: rgba(51, 51, 51, 0.2);
+}
+#border .line.active {
+	width: 5px;
+	height: 36px;
+	background-color: #E74C3C;
+	margin-left: -2px;
+	-webkit-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+#border .one {
+	margin-top: -15px;
+}
+#border .two {
+	margin-top: 55px;
+}
+#border .three {
+	margin-top: 105px;
+}
+#border .four {
+	margin-top: 165px;
+}
+#border .five {
+	margin-top: 215px;
+}
+#border .six {
+	margin-top: 270px;
+}
+
+#right-side {
+	width: 80%;
+	overflow: hidden;
+	padding: 15px;
+	margin: 0;
+}
+#right-side #first, #right-side #second, #right-side #third, 
+#right-side #fourth, #right-side #fifth, #right-side #sixth {
+	position: absolute;
+	top: 185px;
+	width: 65%;
+	-webkit-transition: all .6s ease-in-out;
+	transition: all .6s ease-in-out;
+	margin-top: -350px;
+	opacity: 0;
+	padding-top: 20px;
+	/*display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;*/
+}
+#right-side #first.active, #right-side #second.active, #right-side #third.active,
+#right-side #fourth.active, #right-side #fifth.active, #right-side #sixth.active {
+	margin-top: 0px;
+	opacity: 1;
+	-webkit-transition: all .6s ease-in-out;
+	transition: all .6s ease-in-out;
+	z-index: 1999;
+}
+#right-side .noContent {
+	width: 80%;
+	text-align: center;
+	margin-top: 120px;
+}
+#right-side .noContent img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+}
+#right-side .noContent p {
+	font-weight: 500;
+	color: #999;
+}
+#right-side > div  h1 {
+	font-weight: 800;
+	color: #333;
+}
+#right-side .hasContent {
+	margin-top: 80px;
+	font-size: 18px;
+	padding: 10px;
+}
+/*系统信息部分*/
+#right-side #first .hasContent li,
+#right-side #third .hasContent li {
+	margin-top: 10px;
+	border-bottom: 1px #333 dashed;
+}
+#right-side #first .hasContent .content {
+	font-size: 16px;
+}
+#right-side #first .hasContent .admin,
+#right-side #first .hasContent .send-time {
+	color: #ffa200;
+	padding-left: 20px;
+}
+#right-side #first .hasContent .advice,
+#right-side #third .hasContent ul li a.message-all {
+	font-size: 14px;
+	color: green;
+	cursor: pointer;
+}
+/*卖房部分*/
+#right-side #second a {
+	display: block;
+	width: 100px;
+	height: 30px;
+	background-color: #ffa200;
+	color: #fff;
+	font-size: 18px;
+	line-height: 30px;
+	margin: 200px auto;
+	text-align: center;
+}
+/*留言部分*/
+#right-side #third .hasContent ul li img {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	margin: 5px 10px;
+}
+#right-side #third .hasContent ul li .owner-name {
+	font-size: 16px;
+}
+/*基本信息部分*/
+#right-side #fourth .selfile {
+	margin-left: 50px;
+	margin-top: 50px;
+}
+#right-side #fourth .selfile .selfile-title {
+	color: #999;
+	font-size: 14px;
+}
+#right-side #fourth .selfile .selfile-list {
+	margin-top: 20px;
+}
+#right-side #fourth .selfile li {
+	height: 64px;
+}
+#right-side #fourth .selfile .key {
+	color: #999;
+}
+#right-side #fourth .selfile .value {
+	margin-left: 80px;
+}
+#right-side #fourth .selfile .pic {
+	margin-bottom: 15px;
+}
+#right-side #fourth .selfile .pic img {
+	width: 51px;
+	height: 51px;
+	border-radius: 50%;
+}
+#right-side #fourth .selfile li a {
+	float: right;
+	margin-right: 100px;
+	background: #f2f6ed;
+	color: #ffa200;
+	width: 84px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	outline: 0;
+	border: 0;
+	cursor: pointer;
+	border-radius: 4px;
+	text-decoration: none;
+	font-size: 12px;
+}
+#right-side #fourth .selfile li a:hover {
+	background: #ffa200;
+	color: #f2f6ed;
+}
+#right-side #fourth .selfile .pic a {
+	margin-top: 15px;
+}
+/*修改头像 - 裁切*/
+#update-img .modal-body {
+	width: 650px;
+}
+#update-img .modal-body .action {
+	width: 400px;
+	height: 30px;
+	margin: 10px 0;
+}
+#update-img .modal-body .cropped {
+	position: absolute;
+	right: 65px;
+	top: 60px;
+	width: 150px;
+	border: 1px #ddd solid;
+	height: 300px;
+	padding: 4px;
+	box-shadow: 0px 0px 12px #ddd;
+	text-align: center;
+}
+#update-img .modal-body .cropped::after {
+	content: "预览";
+	position: absolute;
+	bottom: -30px;
+	font-size: 16px;
+}
+#update-img .modal-body .imageBox {
+	position: relative;
+	height: 400px;
+	width: 400px;
+	border: 1px solid #aaa;
+	background: #fff;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	cursor: move;
+	box-shadow: 4px 4px 12px #B0B0B0; 
+}
+#update-img .modal-body .imageBox .thumbBox {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	height: 200px;
+	margin-top: -100px;
+	margin-left: -100px;
+	box-sizing: border-box;
+	border: 1px solid rgb(102, 102, 102);
+	box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5);
+	background: none repeat scroll 0% 0% transparent;
+}
+#update-img .modal-body.imageBox .spinner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	text-align: center;
+	line-height: 400px;
+	background: rgba(0,0,0,0.7);
+}
+#update-img .modal-body .Btnsty_peyton {
+	float: right;
+	width: 66px;
+	display: inline-block;
+	margin-bottom: 10px;
+	height: 57px;
+	line-height: 57px;
+	font-size: 20px;
+	color: #FFFFFF;
+	margin:0px 2px;
+	background-color: #f38e81;
+	border-radius: 3px;
+	text-decoration: none;
+	cursor: pointer;
+	box-shadow: 0px 0px 5px #B0B0B0;
+	border: 0px #fff solid;
+}
+/*选择文件上传*/
+#update-img .modal-body .new-contentarea {
+	width: 165px;
+	overflow:hidden;
+	margin: 0 auto;
+	position:relative;float:left;
+}
+#update-img .modal-body .new-contentarea label {
+	width:100%;
+	height:100%;
+	display:block;
+}
+#update-img .modal-body .new-contentarea input[type=file] {
+	width:188px;
+	height:60px;
+	background:#333;
+	margin: 0 auto;
+	position:absolute;
+	right:50%;
+	margin-right:-94px;
+	top:0;
+	right/*\**/:0px\9;
+	margin-right/*\**/:0px\9;
+	width/*\**/:10px\9;
+	opacity:0;
+	filter:alpha(opacity=0);
+	z-index:2;
+}
+#update-img .modal-body a.upload-img{
+	width:165px;
+	display: inline-block;
+	margin-bottom: 10px;
+	height:57px;
+	line-height: 57px;
+	font-size: 20px;
+	color: #FFFFFF;
+	background-color: #f38e81;
+	border-radius: 3px;
+	text-decoration:none;
+	cursor:pointer;
+	border: 0px #fff solid;
+	box-shadow: 0px 0px 5px #B0B0B0;
+}
+#update-img .modal-body a.upload-img:hover{
+	background-color: #ec7e70;
+}
+/*修改手机号 验证部分*/
+#right-side #fourth .selfile .tel .formtips {
+	font-size: 14px;
+	color: red;
+	margin-left: 100px;
+}
+/*修改密码*/
+#update-pwd .input-group {
+	margin-bottom: 10px;
+}
+
+/*收藏部分*/
+#right-side #fifth .hasContent {
+	margin-top: 50px;
+}
+#right-side #fifth .hasContent ul li {
+	float: left;
+}
+#right-side #fifth .house-box {
+	padding-right: 23px;
+	padding-bottom: 14px;
+}
+#right-side #fifth .house-box a:hover {
+	text-decoration: none;
+}
+#right-side #fifth .house-box a img {
+	width: 180px;
+	height: 148px;
+}
+#right-side #fifth .house-box a h6 {
+	font-size: 14px;
+	width: 185px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	white-space: nowrap;
+	color: #3c3c3c;
+}
+#right-side #fifth .house-box > div {
+	padding-right: 15px;
+	padding-left: 35px;
+}
+#right-side #fifth .house-box > div span {
+	font-size: 14px;
+}
+#right-side #fifth .house-box > div .house-price {
+	color: #ffa200;
+	font-weight: bold;
+}
+#right-side #fifth .house-box a {
+	position: relative;
+}
+#right-side #fifth .cancel {
+	position: absolute;
+	top: -182px;
+	left: 0px;
+	width: 180px;
+	height: 148px;
+	color: #fff;
+	background: rgba(0,0,0,.5);
+	opacity: 0;
+	-webkit-transition: all 0.35s ease-in-out;
+	-moz-transition: all 0.35s ease-in-out;
+	transition: all 0.35s ease-in-out;
+}
+#right-side #fifth a:hover .cancel {
+	opacity: 1;
+}
+#right-side #fifth .cancel i {
+	font-size: 28px;
+	/*垂直居中*/
+	position: absolute;
+	top: 50%;
+	margin-top: -14px;
+	margin-left: -14px;
+}
+#right-side #fifth .cancel i:hover {
+	color: #ffa200;
+	cursor: pointer;
+}
+/*浏览记录部分*/
+#right-side #sixth .hasContent {
+	margin-top: 60px;
+}
+#update-pwd .input-group p {
+	font-size: 18px;
+}
+#right-side #sixth .hasContent .house-img img {
+	width: 120px;
+	height: 90px;
+	margin-right: 15px;
+}
+#right-side #sixth .hasContent .house-details > div {
+	margin-bottom: 8px;
+}
+#right-side #sixth .house-details > .house-details-title a {
+	color: black;
+	font-weight: bold;
+}
+#right-side #sixth .house-details > .house-details-title a:hover {
+	color: #ffa200;
+	font-weight: bold;
+}
+#right-side #sixth .house-details > .house-details-base span {
+	margin-right: 15px;
+}
+#right-side #sixth .house-details > .house-details-base span strong {
+	color: #ffa200;
+}
+#right-side #sixth .house-details > .house-details-address {
+	color: #990;
+	font-size: 14px;
+}
+#right-side #sixth .hasContent .delete {
+	margin-top: 20px;
+	margin-right: 20px;
+	font-size: 14px;
+}
+#right-side #sixth .hasContent .delete i {
+	margin-right: 8px;
+	cursor: pointer;
+}
+#right-side #sixth .hasContent .delete:hover {
+	cursor: pointer;
+	color: red;
+}
+#right-side #sixth .hasContent .deleteAll {
+	color: #999;
+	font-size: 14px;
+	cursor: pointer;
+}
+#right-side #sixth .hasContent .deleteAll:hover {
+	cursor: pointer;
+	color: red;
+}

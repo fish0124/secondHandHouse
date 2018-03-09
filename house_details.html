@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>房屋详细信息</title>
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/imgshow.css">
+</head>
+<body>
+	<!-- Nav -->
+	<header id="header">
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="index.html">二手房网</a>
+				</div>
+
+				<!-- Collect the nav links, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#" class="select-city" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="city-now">新乡市</span><span style="font-size: 12px;color:#ffa200;"> 切换 <i class="caret"></i></span>
+							</a>
+							<!-- 省市三级联动 -->
+							<ul class="select-lis showlis hiddenlis">
+								<li>
+									<select name="province" id="province">
+										<option>请选择</option>
+									</select>
+								</li>
+								<li>
+									<select name="city" id="city">
+										<option>请选择</option>
+									</select>
+								</li>
+							</ul>
+						</li>
+						<li><a href="index.html">首页<span class="sr-only">(current)</span></a></li>
+						<li><a href="second_hand.html">二手房</a></li>
+						<li><a href="sell.html">卖房</a></li>
+						<li><a href="about.html">关于本站</a></li>
+						<li><a href="user.html">个人中心</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right noLogin">
+						<li><a href="login_register.html?id=login">登录</a></li>
+						<li><a href="login_register.html?id=register">免费注册</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right yesLogin hide">
+						<li>
+							<a href="user.html">欢迎
+								<i class="userPic"><img src="img/userPic01.jpg"></i>
+								<span class="userName">小菜鸟一只</span>
+								的访问！
+							</a>
+						</li>
+						<li><a href="#">注销</a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container -->
+		</nav>
+	</header>
+	<!-- / Nav -->
+
+	<!-- topDiv -->
+	<section id="topDiv" class="navbar-fixed-top">
+		<div class="container">
+			<ul class="clearfix">
+				<li class="pull-left">红旗区常青藤 南北通透 精装多层社区 可拎包入住 限时</li>
+				<li class="pull-right"><i class="glyphicon glyphicon-phone"></i>张三 15736991315</li>
+				<li class="pull-right">3室2厅,124m²,178万</li>
+			</ul>
+		</div>
+	</section>
+	<!-- / topDiv -->
+
+	<!-- Content -->
+	<section id="overview">
+		<div class="container">
+			<!-- 头部信息 -->
+			<div>
+				<h2>红旗区常青藤 南北通透 精装多层社区 可拎包入住 限时</h2>
+				<p>
+					<span>178万</span>
+					<span>3室2厅</span>
+					<span>124m²</span>
+					<span class="pull-right like">
+						<i class="glyphicon glyphicon-heart"></i>
+						关注房源
+					</span>
+					<span class="pull-right liked hide">
+						<i class="glyphicon glyphicon-ok"></i>
+						已关注~
+					</span>
+				</p>
+			</div>
+			<div class="clearfix">
+				<!-- 图片展示 -->
+				<div class="imgplayer pull-left">
+					<div class="banner">
+						<div class="focus" id="big_frame">
+							<ul id="big_list">
+								<li>
+									<div>
+										<a href="#" target="_blank"><img src="img/details01.jpg" alt="" width="700" height="500" /></a>
+									</div>
+								</li>
+								<li>
+									<div>
+										<a href="#" target="_blank"><img src="img/details02.jpg" alt="" width="700" height="500" /></a>
+									</div>
+								</li>
+								<li>
+									<div>
+										<a href="#" target="_blank"><img src="img/details03.jpg" alt="" width="700" height="500" /></a>
+									</div>
+								</li>
+								<li>
+									<div>
+										<a href="#" target="_blank"><img src="img/details04.jpg" alt="" width="700" height="500" /></a>
+									</div>
+								</li>
+								<li>
+									<div>
+										<a href="#" target="_blank"><img src="img/details05.jpg" alt="" width="700" height="500" /></a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<a href="javascript:;" class="img_prev" id="back">&nbsp;</a> <a href="javascript:;" class="img_next" id="forward">&nbsp;</a>
+						<div class="small_show" id="small_frame">
+							<ul id="small_list">
+								<li>
+									<div><img src="img/details01.jpg" alt="" width="120" height="40" /></div>
+								</li>
+								<li>
+									<div><img src="img/details02.jpg" alt="" width="120" height="40" /></div>
+								</li>
+								<li>
+									<div><img src="img/details03.jpg" alt="" width="120" height="40" /></div>
+								</li>
+								<li>
+									<div><img src="img/details04.jpg" alt="" width="120" height="40" /></div>
+								</li>
+								<li>
+									<div><img src="img/details05.jpg" alt="" width="120" height="40" /></div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- 卖房者信息 -->
+				<div class="pull-right">
+					<div class="owner">
+						<!-- 用户头像 -->
+						<img src="img/userPic02.jpeg">
+						<div class="pull-right">
+							<!-- 用户名 -->
+							<h5>张三</h5>
+							<p>本房信息由我维护，有变化最快得知</p>
+							<!-- 联系电话 -->
+							<i class="glyphicon glyphicon-phone"></i>
+							<span>15736991315</span>
+						</div>
+					</div>
+					<!-- 留言模块 -->
+					<div class="messages">
+						<div class="topArea">
+							<i class="glyphicon glyphicon-comment pull-left"></i>
+							给我留言
+							<i class="glyphicon glyphicon-chevron-left pull-right"></i>
+						</div>
+						<div class="txtArea">
+							<form>
+								<textarea placeholder="您有什么问题呢?" style="height:expression((this.scrollHeight>150)?'150px':(this.scrollHeight+5)+'px');overflow:auto;"></textarea>
+								<button class="pull-right">留言</button>
+							</form>
+							<div class="mess_content">
+								<ul>
+									<li>
+										<img src="img/userPic01.jpg">
+										<span>你好</span>
+										<i class="pull-right">2017/12/22 9:23:35</i>
+									</li>
+									<li>
+										<img src="img/userPic02.jpeg"
+										><span>你好，有什么问题吗？</span>
+										<i class="pull-right">2017/12/22 9:24:35</i>
+									</li>
+									<li>
+										<img src="img/userPic01.jpg">
+										<span>我想预约看房</span>
+										<i class="pull-right">2017/12/22 9:25:35</i>
+									</li>
+									<li>
+										<img src="img/userPic02.jpeg"
+										><span>没问题</span>
+										<i class="pull-right">2017/12/22 9:26:35</i>
+									</li>
+									<li>
+										<img src="img/userPic01.jpg">
+										<span>lalalallalla</span>
+										<i class="pull-right">2017/12/22 9:25:35</i>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- / Content -->
+	
+	<!-- Details -->
+	<section id="details">
+		<div class="container">
+			<div>
+				<!-- 标题 -->
+				<div class="details_title clearfix">
+					<h3 class="pull-left">房屋信息</h3>
+					<p class="pull-left">温馨提示：更多房屋信息请与供房源者联系</p>
+					<span class="pull-right">发布时间：2017年12月18日</span>
+				</div>
+				<!-- 房源信息 -->
+				<div class="details_info">
+					<div class="row">
+						<ul class="col-xs-4">
+							<li>小区：<span>常青藤</span></li>
+							<li>位置：<span>新乡红旗区金穗大道乔榭815号</span></li>
+							<li>年代：<span>2008年</span></li>
+							<li>类型：<span>普通住宅</span></li>
+						</ul>
+						<ul class="col-xs-4">
+							<li>房型：<span>3室2厅</span></li>
+							<li>面积：<span>124m²</span></li>
+							<li>朝向：<span>南北</span></li>
+							<li>单价：<span>14354元/m²</span></li>
+						</ul>
+						<ul class="col-xs-4">
+							<li>房屋编号：<span>001</span></li>
+							<li>简单描述：<span>品质小区</span></li>
+							<li>简单描述：<span>繁华地段</span></li>
+							<li>简单描述：<span>南北通透</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="remind col-xs-9">
+				<!-- 温馨提醒 -->
+				<div class="col-xs-6">
+					<h4><i class="glyphicon glyphicon-bell"></i>温馨提醒</h4>
+					<ul>
+						<li>1.不能签“到手价”；</li>
+						<li>2.不要轻易提前交房；</li>
+						<li>3.交钥匙要谨慎；</li>
+						<li>4.自售房屋有学问；</li>
+						<li>5.合同细节要讲清。</li>
+					</ul>
+				</div>
+				<!-- 交易规则 -->
+				<div class="col-xs-6">
+					<h4><i class="glyphicon glyphicon-home"></i>交易规则</h4>
+					<ul>
+						<li>1.不收取看房费；</li>
+						<li>2.不赚房屋差价，房价透明；</li>
+						<li>3.不哄抬房价；</li>
+						<li>4.所发布房源不许真实有效；</li>
+						<li>5.祝您愉快！</li>
+					</ul>
+				</div>
+				</div>
+				<div class="same col-xs-3">
+					相似二手房源
+					<div>
+					<a href="house_details.html">
+						<img src="img/details11.jpg">
+						<h6>常青藤 周边配套设备 设施齐全</h6>
+						<p>
+							<span>56.8万</span>
+							<span>3室2厅,100m²</span>
+						</p>
+					</a>
+					</div>
+					<div>
+					<a href="house_details.html">
+						<img src="img/details13.jpg">
+						<h6>常青藤 周边配套设备 设施齐全</h6>
+						<p>
+							<span>44.5万</span>
+							<span>3室2厅,108m²</span>
+						</p>
+					</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- / Details -->
+
+	<hr>
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="container">
+			<div class="footer_all">
+				<div class="footer_up text-center">
+					<a href="">关于我们 |</a>
+					<a href="">&nbsp;联系我们 |</a>
+					<a href="javascript:void(0);" data-target="other_city">&nbsp;其它城市</a>
+				</div>
+				<div class="text-center">
+					新乡学院 计算机与信息工程学院 计算机科学与技术专业 俞嘉婷
+				</div>
+				<div class="footer_botm text-center">
+					手机：157-3691-8985 微信：13221710327 邮箱：1767039461@qq.com
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- / Footer -->
+	<!-- SideBar -->
+	<section id="sideBar">
+		<ul>
+			<!-- 浏览记录 -->
+			<li>
+				<a class="history" href="user.html#sixth" target="_blank">
+					<div class="txt">浏览记录</div>
+					<i class="glyphicon glyphicon-time"></i>
+				</a>
+			</li>
+			<!-- 您的建议 -->
+			<li>
+				<a class="advice" href="#" type="button" data-toggle="modal" data-target="#adviceModal">
+					<div class="txt">您的建议</div>
+					<i class="glyphicon glyphicon-pencil"></i>
+				</a>
+			</li>
+			<!-- 收藏房源 -->
+			<li>
+				<a class="like" href="user.html#fifth" target="_blank">
+					<div class="txt">收藏房源</div>
+					<i class="glyphicon glyphicon-heart"></i>
+				</a>
+			</li>
+			<!-- 回到顶部 -->
+			<li>
+				<a class="goBack" href="#">
+					<div class="txt">回到顶部</div>
+					<i class="glyphicon glyphicon-menu-up"></i>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- / SideBar -->
+	<!-- 您的建议 模态框 -->
+	<div class="modal fade" id="adviceModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">您的建议</h4>
+				</div>
+				<div class="modal-body">
+					<div class="advice-txt">
+						<textarea class="col-sm-12" placeholder="请输入您对我们系统的建议"></textarea>
+					</div>
+					<div class="clearfix">
+						<p class="num-tips pull-right">还可以输入<i>200</i>个字</p>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">提交</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<!-- / 您的建议 模态框 -->
+</body>
+</html>
+<script type="text/javascript" src="lib/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/CITIES.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/house_details.js"></script>

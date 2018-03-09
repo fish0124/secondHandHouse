@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>关于本站</title>
+	<style type="text/css">
+		body {
+			padding: 0;
+			margin: 0;
+			overflow: hidden;/*防止滚动条的出现*/
+			/*background: url(img/about.gif) no-repeat center bottom;*/
+			background: url(img/banner.jpg);
+		}
+	</style>
+</head>
+<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+<body>
+	<!-- Nav -->
+	<header id="header">
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="index.html">二手房网</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- / Nav -->
+	<div id="container"></div>
+</body>
+<script type="text/javascript" src="lib/konva/konva.js"></script>
+<script type="text/javascript" src="js/myCircleText.js"></script>
+<script type="text/javascript">
+	// 创建舞台
+	var stage = new Konva.Stage({
+		container: 'container',
+		width: window.innerWidth,
+		height: window.innerHeight
+	});
+
+	// 中心点坐标
+	var centX = stage.width() / 2;
+	var centY = stage.height() / 2;
+
+	// 创建背景层
+	var bglLayer = new Konva.Layer();
+	stage.add(bglLayer);
+
+	//绘制背景
+	// 两个虚线圆的半径
+	var innerRadius = 252 / 2;	// 内圆 虚线的半径
+	var outerRadius = 220;		// 外圆 虚线 的半径
+	
+	//外圆 虚线
+	var outerCircle = new Konva.Circle({
+		x: centX,
+		y: centY,
+		radius: outerRadius,
+		stroke: '#ccc',
+		strokeWidth: 4,
+		dash: [10,4] //虚线的设置 10实线 4空像素
+	});
+	bglLayer.add(outerCircle);
+
+	//外圆 虚线
+	var innerCircle = new Konva.Circle({
+		x: centX,
+		y: centY,
+		radius: innerRadius,
+		stroke: '#ccc',
+		strokeWidth: 4,
+		dash: [10,4] //虚线的设置 10实线 4空像素
+	});
+	bglLayer.add(innerCircle);
+
+	// 中心的圆
+	var cenCircle = new Konva.Circle({
+		x: centX,
+		y: centY,
+		radius: 132 / 2,
+		fill: '#525A82',
+	});
+	bglLayer.add(cenCircle);
+
+	// 圆外的圆环
+	var cenRing = new Konva.Ring({
+		x: centX,
+		y: centY,
+		innerRadius: 132 / 2,
+		outerRadius: 90,
+		fill: '#E1E1E1',
+		opacity: .5
+	});
+	bglLayer.add(cenRing);
+
+	// 圆中的文字
+	var cenText = new Konva.Text({
+		x: centX - 90, // 减去圆环的外半径
+		y: centY - 8, // 减去字体大小的一半
+		width: 180,
+		align: 'center',
+		fontSize: 22,
+		fontFamily: '微软雅黑',
+		fontStyle: 'bold',
+		text: '关于本站',
+		fill: '#fff'
+	});
+	bglLayer.add(cenText);
+
+	// 动画层的绘制
+	var animateLayer = new Konva.Layer();
+	stage.add(animateLayer);
+
+	// 内圆虚线 上的 圆
+	// 圆心坐标
+	// var x0 = centX + innerRadius * Math.cos( -60 * Math.PI / 180);
+	// var y0 = centY + innerRadius * Math.sin( -60 * Math.PI / 180);
+
+	// 创建内虚线圆的组 包含该虚线圆上的所有圆
+	var lay2Group = new Konva.Group({
+		x: centX,
+		y: centY
+	});
+
+	// 添加内虚线圆上的圆1
+	var lay2_1_circle = new CircleText({
+		x: innerRadius * Math.cos( -60 * Math.PI / 180),
+		y: innerRadius * Math.sin( -60 * Math.PI / 180),
+		innerRadius: 30, // 内圆半径
+		outerRadius: 40, // 外圆半径
+		innerStyle: '#1ACED1', 	//内圆填充的颜色
+		outerStyle: '#E1E1E1',	//外圆填充的颜色
+		text: '行胜于言'
+	});
+	lay2_1_circle.addToGroupOrLayer(lay2Group);
+	
+	// 添加内虚线圆上的圆2
+	var lay2_2_circle = new CircleText({
+		x: innerRadius * Math.cos( 160 * Math.PI / 180),
+		y: innerRadius * Math.sin( 160 * Math.PI / 180),
+		innerRadius: 30, // 内圆半径
+		outerRadius: 40, // 外圆半径
+		innerStyle: 'red', 	//内圆填充的颜色
+		outerStyle: '#E1E1E1',	//外圆填充的颜色
+		text: '人人信赖'
+	});
+	lay2_2_circle.addToGroupOrLayer(lay2Group);
+
+	// 添加内虚线圆上的圆3
+	var lay2_3_circle = new CircleText({
+		x: innerRadius * Math.cos( 50 * Math.PI / 180),
+		y: innerRadius * Math.sin( 50 * Math.PI / 180),
+		innerRadius: 30, // 内圆半径
+		outerRadius: 40, // 外圆半径
+		innerStyle: '#999', 	//内圆填充的颜色
+		outerStyle: '#E1E1E1',	//外圆填充的颜色
+		text: '优化配置'
+	});
+	lay2_3_circle.addToGroupOrLayer(lay2Group);
+
+	// 创建外虚线圆的组 包含该虚线圆上的所有圆
+	var lay3Group = new Konva.Group({
+		x: centX,
+		y: centY
+	});
+
+	// 添加外虚线圆上的圆1
+	var lay3_2_circle = new CircleText({
+		x: outerRadius * Math.cos( 220 * Math.PI / 180),
+		y: outerRadius * Math.sin( 220 * Math.PI / 180),
+		innerRadius: 40, // 内圆半径
+		outerRadius: 50, // 外圆半径
+		innerStyle: 'green', 	//内圆填充的颜色
+		outerStyle: '#E1E1E1',	//外圆填充的颜色
+		text: '二手房业务'
+	});
+	lay3_2_circle.addToGroupOrLayer(lay3Group);
+
+	// 添加外虚线圆上的圆2
+	var lay3_2_circle = new CircleText({
+		x: outerRadius * Math.cos( 100 * Math.PI / 180),
+		y: outerRadius * Math.sin( 100 * Math.PI / 180),
+		innerRadius: 40, // 内圆半径
+		outerRadius: 50, // 外圆半径
+		innerStyle: '#111', 	//内圆填充的颜色
+		outerStyle: '#E1E1E1',	//外圆填充的颜色
+		text: '信息服务平台'
+	});
+	lay3_2_circle.addToGroupOrLayer(lay3Group);
+
+	// 添加外虚线圆上的圆3
+	var lay3_3_circle = new CircleText({
+		x: outerRadius * Math.cos( 340 * Math.PI / 180),
+		y: outerRadius * Math.sin( 340 * Math.PI / 180),
+		innerRadius: 40, // 内圆半径
+		outerRadius: 50, // 外圆半径
+		innerStyle: '#567', 	//内圆填充的颜色
+		outerStyle: '#E1E1E1',	//外圆填充的颜色
+		text: '一站式服务'
+	});
+	lay3_3_circle.addToGroupOrLayer(lay3Group);
+	
+	animateLayer.add(lay2Group);
+	animateLayer.add(lay3Group);
+
+	animateLayer.draw();
+	bglLayer.draw();
+
+	// 对动画层 添加动画
+	var anglePerSecond = 80;// 设置每秒转的度数
+	var animate = new Konva.Animation(function(frame) {
+		//timeDiff: 是两帧之间的时间差。是变化的，根据电脑性能和浏览器的状态动态变化。
+		//计算 当前帧需要旋转的角度。
+		var rotateAngle = anglePerSecond / 1000 * frame.timeDiff;
+		lay2Group.rotate(rotateAngle);
+
+		// 解决 文字一起旋转的问题
+		
+		//拿到所有 内虚线圈 上的圆的 内部组进行反向旋转
+		lay2Group.getChildren().each(function(el,index) {
+			el.rotate( -rotateAngle );
+		});
+
+		lay3Group.rotate(-rotateAngle);
+
+		//拿到所有 外虚线圈 上的圆的 内部组进行反向旋转
+		lay3Group.getChildren().each(function(el,index) {
+			el.rotate( -rotateAngle );
+		});
+	},animateLayer);
+
+	// 开始动画
+	animate.start();
+
+	// 鼠标进过 离开 的事件
+	// konva的事件系统 和jquery一样
+	animateLayer.on("mouseover",function() {
+		anglePerSecond = 10;
+	});
+
+	animateLayer.on("mouseout",function() {
+		anglePerSecond = 80;
+	});
+</script>
+</html>

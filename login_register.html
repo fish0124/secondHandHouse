@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录和注册</title>
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body style="background-image: url(img/login-reg-bg.jpg);">
+	<!-- Nav -->
+	<header id="header">
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="index.html">二手房网</a>
+				</div>
+				
+			</div>
+		</nav>
+	</header>
+	<!-- / Nav -->
+	<!--选项卡登录和注册-->
+	<div id="login-register">
+		<ul class="nav nav-tabs" role="tablist" id="feature-tab">
+			<li id="li-login" onClick="setLoginActive()"><a href="#tab-login" role="tab" data-toggle="tab">登录</a></li>
+			<li id="li-register" onClick="setRegisterActive()"><a href="#tab-register" role="tab" data-toggle="tab">免费注册</a></li>
+		</ul>
+
+		<div class="tab-content mytabs-content">
+			<div class="tab-pane" id="tab-login">
+				<div class="row feature">
+					<br>
+					<form class="form-horizontal" role="form">
+						<div class="form-group">
+							<label for="userName" class="col-sm-3 control-label">用户名:</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="userName"
+								placeholder="请输入您的用户名">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="password" class="col-sm-3 control-label">密码:</label>
+							<div class="col-sm-9">
+								<input type="password" class="form-control" id="password"
+								placeholder="请输入您的帐号密码">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-6 col-sm-6">
+								<button type="submit" class="btn btn-primary">登录</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="tab-pane" id="tab-register">
+				<div class="row feature">
+					<br>
+					<form class="form-horizontal" role="form">
+						<div class="form-group">
+							<label for="userName" class="col-sm-3 control-label"><i style="color: red;">*</i> 用户名:</label>
+							<div class="col-sm-9">
+								<input type="text" class="required form-control" id="userName"
+								placeholder="请输入您的用户名 (必填)">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="tel" class="col-sm-3 control-label"><i style="color: red;">*</i> 手机号码:</label>
+							<div class="col-sm-9">
+								<input type="text" class="required form-control" id="tel"
+								placeholder="方便您与他人的沟通 (必填)">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">性别:</label>
+							<div class="col-sm-9">
+								<input name="sex" type="radio" value="" />女士
+								<input name="sex" type="radio" value="" />先生
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="password" class="col-sm-3 control-label"><i style="color: red;">*</i> 密码:</label>
+							<div class="col-sm-9">
+								<input type="password" class="required form-control" id="password"
+								placeholder="请输入您的密码 不少于6位 (必填)">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="confirmPassword" class="col-sm-3 control-label"><i style="color: red;">*</i> 确认密码:</label>
+							<div class="col-sm-9">
+								<input type="password" class="required form-control" id="confirmPassword"
+								placeholder="请再输一次密码，确认是否正确 (必填)">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="pic" class="col-sm-3 control-label">头像:</label>
+							<div class="col-sm-9">
+								<input type="file" class="form-control" id="pic"
+								placeholder="请选择您的头像">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-6 col-sm-6">
+								<button type="submit" id="send" class="btn btn-primary">注册</button>
+								<button type="submit" id="res" class="btn btn-primary">重置</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<!-- <footer id="footer" style="position: absolute; bottom: 10px;">
+		<div class="container">
+			<div class="footer_all">
+				<div class="footer_up text-center">
+						<a href="">关于我们 |</a>
+						<a href="">&nbsp;联系我们 |</a>
+						<a href="javascript:void(0);" data-target="other_city">&nbsp;其它城市</a>
+				</div>
+				<div class="text-center">
+					新乡学院 计算机与信息工程学院 计算机科学与技术专业 俞嘉婷 
+				</div>
+				<div class="footer_botm text-center">
+					手机：157-3691-8985 微信：13221710327 邮箱：1767039461@qq.com
+				</div>
+			</div>
+		</div>
+	</footer> -->
+	<!-- / Footer -->
+</body>
+</html>
+<script type="text/javascript" src="lib/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/login-register.js"></script>

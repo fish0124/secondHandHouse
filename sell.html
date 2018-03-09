@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>出售二手房</title>
+</head>
+<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<body>
+	<!-- Nav -->
+	<header id="header">
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="index.html">二手房网</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- / Nav -->
+	<!-- sell-content -->
+	<section id="sell">
+		<h2>免费发布出售房源</h2>
+		<div class="sell_content">
+			<div class="container">
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="h_province" class="col-sm-3 control-label">房源所在城市:</label>
+						<div class="col-sm-6">
+							<input type="text" class="form-control" id="h_province"
+							placeholder="请输入房源的所在城市">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="h_area" class="col-sm-3 control-label">小区:</label>
+						<div class="col-sm-6">
+							<input type="text" class="form-control" id="h_area"
+							placeholder="请输入小区名">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="h_address" class="col-sm-3 control-label">房屋地址:</label>
+						<div class="col-sm-6">
+							<input type="text" class="form-control" id="h_address"
+							placeholder="请输入房屋的地址">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="h_type" class="col-sm-3 control-label">户型:</label>
+						<div class="col-sm-6">
+							<input type="text" class="form-control" id="h_type"
+							placeholder="请输入房屋的户型，如3室1厅">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="h_type" class="col-sm-3 control-label">建筑面积:</label>
+						<div class="col-sm-5">
+							<input type="text" class="form-control" id="h_type"
+							placeholder="请输入房屋的建筑面积">
+						</div>
+						<span class="col-sm-1">平方米</span>
+					</div>
+					<div class="form-group">
+						<label for="h_direction" class="col-sm-3 control-label">朝向:</label>
+						<div class="col-sm-6">
+							<select class="form-control">
+								<option>南北</option>
+								<option>南</option>
+								<option>东南</option>
+								<option>东</option>
+								<option>西南</option>
+								<option>北</option>
+								<option>西</option>
+								<option>东西</option>
+								<option>东北</option>
+								<option>北西</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="h_price" class="col-sm-3 control-label">期待售价:</label>
+						<div class="col-sm-5">
+							<input type="text" class="form-control" id="h_price"
+							placeholder="请输入您期待卖出的价格">
+						</div>
+						<span class="col-sm-1">万元</span>
+					</div>
+					<div class="form-group">
+						<label for="h_title" class="col-sm-3 control-label">房源标题:</label>
+						<div class="col-sm-6">
+							<input type="text" class="form-control" id="h_title"
+							placeholder="利于客户的搜索哦~">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="h_title" class="col-sm-3 control-label">房源描述:</label>
+						<div class="col-sm-6">
+							<input type="text" class="form-control" id="h_title"
+							placeholder="选出您的房源最具特征的特点~">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="h_owner" class="col-sm-3 control-label">称呼:</label>
+						<div class="col-sm-6">
+							<input type="text" class="form-control" id="h_owner"
+							placeholder="我们应该怎么称呼您">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="h_pic" class="col-sm-3 control-label">上传图片:</label>
+						<div class="col-sm-6">
+							<input type="file" class="form-control" id="h_pic"
+							placeholder="吸引更多的客户哦">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="text-center">
+						<button type="submit" class="btn btn-primary">确定发布</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+	<!-- /sell-content -->
+</body>
+<script type="text/javascript" src="lib/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="sell.js"></script>

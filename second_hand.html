@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>二手房网</title>
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<!-- Nav -->
+	<header id="header">
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="index.html">二手房网</a>
+				</div>
+
+				<!-- Collect the nav links, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#" class="select-city" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="city-now">新乡市</span><span style="font-size: 12px;color:#ffa200;"> 切换 <i class="caret"></i></span>
+							</a>
+							<!-- 省市三级联动 -->
+							<ul class="select-lis showlis hiddenlis">
+								<li>
+									<select name="province" id="province">
+										<option>请选择</option>
+									</select>
+								</li>
+								<li>
+									<select name="city" id="city">
+										<option>请选择</option>
+									</select>
+								</li>
+							</ul>
+						</li>
+						<li><a href="index.html">首页<span class="sr-only">(current)</span></a></li>
+						<li class="active"><a href="second_hand.html">二手房</a></li>
+						<li><a href="sell.html">卖房</a></li>
+						<li><a href="about.html">关于本站</a></li>
+						<li><a href="user.html">个人中心</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right noLogin">
+						<li><a href="login_register.html?id=login">登录</a></li>
+						<li><a href="login_register.html?id=register">免费注册</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right yesLogin hide">
+						<li>
+							<a href="user.html">欢迎
+								<i class="userPic"><img src="img/userPic01.jpg"></i>
+								<span class="userName">小菜鸟一只</span>
+							的访问！
+							</a>
+						</li>
+						<li><a href="#">注销</a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container -->
+		</nav>
+	</header>
+	<!-- / Nav -->
+
+	<!-- 选择搜索  二手房分类选择项-->
+	<section id="select-box">
+		<div class="container">
+		<img src="img/bottom-ad.png">
+			<!-- 搜索 -->
+			<div class="input-group search">
+				<input type="text" class="form-control search_box" placeholder="请输入小区名称、地址等关键字...">
+				<span class="input-group-btn">
+					<button class="btn btn-default search_btn" type="button">搜索</button>
+				</span>
+			</div>
+			<div class="select-type-box">
+				<p>您可以进行选择，筛选出您想要的房源</p>
+				<div class="select-type-region">
+					<span class="nav-type-title">按服务区域: </span>
+					<a href="#" class="curr">不限</a>
+				</div>
+				<div class="select-type-price">
+					<span class="nav-type-title">按均价（元/平米）: </span>
+					<a href="#" class="curr">不限</a>
+					<a href="#">5千以下</a>
+					<a href="#">5千-1万</a>
+					<a href="#">1-2万</a>
+					<a href="#">2-3万</a>
+					<a href="#">3-4万</a>
+					<a href="#">4-5万</a>
+					<a href="#">5-6万</a>
+					<a href="#">6-7万</a>
+					<a href="#">7-8万</a>
+					<a href="#">8万以上</a>
+				</div>
+				<div class="select-type-room">
+					<span class="nav-type-title">按户型: </span>
+					<a href="#" class="curr">不限</a>
+					<a href="#">一室</a>
+					<a href="#">二室</a>
+					<a href="#">三室</a>
+					<a href="#">四室</a>
+					<a href="#">五室</a>
+					<a href="#">五室以上</a>
+				</div>
+				<div class="select-type-age">
+					<span class="nav-type-title">按年代: </span>
+					<a href="#" class="curr">不限</a>
+					<a href="#">1995年以前</a>
+					<a href="#">1996-2000年</a>
+					<a href="#">2001-2005年</a>
+					<a href="#">2006-2010年</a>
+					<a href="#">2011-2015年</a>
+					<a href="#">2016年以后</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- / 选择搜索 -->
+	<!-- Content -->
+	<section id="content">
+		<div class="container">
+			<div class="content_rank clearfix">
+				<div class="pull-left current">默认排序</div>
+				<div class="pull-left">面积<i class="glyphicon glyphicon-arrow-down"></i></div>
+				<div class="pull-left">价格<i class="glyphicon glyphicon-arrow-down"></i></div>
+				<div class="pull-left">最新<i class="glyphicon glyphicon-arrow-down"></i></div>
+			</div>
+			<span>为您找到以下新乡二手房</span>
+			<div class="row">
+				<!-- 主要内容 -->
+				<div class="result col-xs-9">
+					<ul>
+						<li class="clearfix">
+							<!-- 图片信息 -->
+							<div class="house-img pull-left">
+								<img src="img/details01.jpg" width="180" height="135" />
+							</div>
+							<!-- 具体信息 -->
+							<div class="house-details pull-left">
+								<!-- 二手房标题 -->
+								<div class="house-details-title">
+									<a data-from="" title="红旗区常青藤 南北通透 精装多层社区 可拎包入住 限时" href="house_details.html">
+										红旗区常青藤 南北通透 精装多层社区 可拎包入住 限时
+									</a>
+								</div>
+								<!-- 二手房详细信息 -->
+								<div class="house-details-more clearfix">
+									<span class="pull-left">3室2厅</span>
+									<span class="pull-left">124m²</span>
+									<span class="pull-left">2008年建造</span>
+									<span class="pull-left">
+										<i class="glyphicon glyphicon-user"></i>&nbsp;张三
+									</span>
+								</div>
+								<!-- 二手房地址 -->
+								<div class="house-details-address">
+									<span class="comm-address" title="常青藤&nbsp;&nbsp;新乡红旗区金穗大道乔榭815号">
+										常青藤&nbsp;&nbsp;新乡红旗区金穗大道乔榭815号
+									</span>
+								</div>
+								<!-- 二手房描述 -->
+								<div class="house-details-desc clearfix">
+									<span class="pull-left">品质小区 </span>
+									<span class="pull-left">繁华地段</span>
+									<span class="pull-left">南北通透</span>
+								</div>
+							</div>
+							<!-- 二手房价格 -->
+							<div class="house-price">
+								<span class="text-right">
+									<strong>178</strong>万
+								</span>
+								<span class="text-right">14354元/m²</span>
+							</div>
+						</li>
+						<li class="clearfix">
+							<!-- 图片信息 -->
+							<div class="house-img pull-left">
+								<img src="img/details01.jpg" width="180" height="135" />
+							</div>
+							<!-- 具体信息 -->
+							<div class="house-details pull-left">
+								<!-- 二手房标题 -->
+								<div class="house-details-title">
+									<a data-from="" title="红旗区常青藤 南北通透 精装多层社区 可拎包入住 限时" href="house_details.html">
+										红旗区常青藤 南北通透 精装多层社区 可拎包入住 限时
+									</a>
+								</div>
+								<!-- 二手房详细信息 -->
+								<div class="house-details-more clearfix">
+									<span class="pull-left">3室2厅</span>
+									<span class="pull-left">124m²</span>
+									<span class="pull-left">2008年建造</span>
+									<span class="pull-left">
+										<i class="glyphicon glyphicon-user"></i>&nbsp;张三
+									</span>
+								</div>
+								<!-- 二手房地址 -->
+								<div class="house-details-address">
+									<span class="comm-address" title="常青藤&nbsp;&nbsp;新乡红旗区金穗大道乔榭815号">
+										常青藤&nbsp;&nbsp;新乡红旗区金穗大道乔榭815号
+									</span>
+								</div>
+								<!-- 二手房描述 -->
+								<div class="house-details-desc clearfix">
+									<span class="pull-left">品质小区 </span>
+									<span class="pull-left">繁华地段</span>
+									<span class="pull-left">南北通透</span>
+								</div>
+							</div>
+							<!-- 二手房价格 -->
+							<div class="house-price">
+								<span class="text-right">
+									<strong>178</strong>万
+								</span>
+								<span class="text-right">14354元/m²</span>
+							</div>
+						</li>
+						<li class="clearfix">
+							<!-- 图片信息 -->
+							<div class="house-img pull-left">
+								<img src="img/details01.jpg" width="180" height="135" />
+							</div>
+							<!-- 具体信息 -->
+							<div class="house-details pull-left">
+								<!-- 二手房标题 -->
+								<div class="house-details-title">
+									<a data-from="" title="红旗区常青藤 南北通透 精装多层社区 可拎包入住 限时" href="house_details.html">
+										红旗区常青藤 南北通透 精装多层社区 可拎包入住 限时
+									</a>
+								</div>
+								<!-- 二手房详细信息 -->
+								<div class="house-details-more clearfix">
+									<span class="pull-left">3室2厅</span>
+									<span class="pull-left">124m²</span>
+									<span class="pull-left">2008年建造</span>
+									<span class="pull-left">
+										<i class="glyphicon glyphicon-user"></i>&nbsp;张三
+									</span>
+								</div>
+								<!-- 二手房地址 -->
+								<div class="house-details-address">
+									<span class="comm-address" title="常青藤&nbsp;&nbsp;新乡红旗区金穗大道乔榭815号">
+										常青藤&nbsp;&nbsp;新乡红旗区金穗大道乔榭815号
+									</span>
+								</div>
+								<!-- 二手房描述 -->
+								<div class="house-details-desc clearfix">
+									<span class="pull-left">品质小区 </span>
+									<span class="pull-left">繁华地段</span>
+									<span class="pull-left">南北通透</span>
+								</div>
+							</div>
+							<!-- 二手房价格 -->
+							<div class="house-price">
+								<span class="text-right">
+									<strong>178</strong>万
+								</span>
+								<span class="text-right">14354元/m²</span>
+							</div>
+						</li>
+						<li class="clearfix">
+							<!-- 图片信息 -->
+							<div class="house-img pull-left">
+								<img src="img/details01.jpg" width="180" height="135" />
+							</div>
+							<!-- 具体信息 -->
+							<div class="house-details pull-left">
+								<!-- 二手房标题 -->
+								<div class="house-details-title">
+									<a data-from="" title="红旗区常青藤 南北通透 精装多层社区 可拎包入住 限时" href="house_details.html">
+										红旗区常青藤 南北通透 精装多层社区 可拎包入住 限时
+									</a>
+								</div>
+								<!-- 二手房详细信息 -->
+								<div class="house-details-more clearfix">
+									<span class="pull-left">3室2厅</span>
+									<span class="pull-left">124m²</span>
+									<span class="pull-left">2008年建造</span>
+									<span class="pull-left">
+										<i class="glyphicon glyphicon-user"></i>&nbsp;张三
+									</span>
+								</div>
+								<!-- 二手房地址 -->
+								<div class="house-details-address">
+									<span class="comm-address" title="常青藤&nbsp;&nbsp;新乡红旗区金穗大道乔榭815号">
+										常青藤&nbsp;&nbsp;新乡红旗区金穗大道乔榭815号
+									</span>
+								</div>
+								<!-- 二手房描述 -->
+								<div class="house-details-desc clearfix">
+									<span class="pull-left">品质小区 </span>
+									<span class="pull-left">繁华地段</span>
+									<span class="pull-left">南北通透</span>
+								</div>
+							</div>
+							<!-- 二手房价格 -->
+							<div class="house-price">
+								<span class="text-right">
+									<strong>178</strong>万
+								</span>
+								<span class="text-right">14354元/m²</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- 本站品质 -->
+				<div class="myTags col-xs-3 text-center">
+					<ul>
+						<li>
+							<i class="glyphicon glyphicon-eye-open"></i>
+							<p>真实房源 真实价格</p>
+						</li>
+						<li>
+							<i class="glyphicon glyphicon-resize-horizontal"></i>
+							<p>双向交流 可靠安全</p>
+						</li>
+						<li>
+							<i class="glyphicon glyphicon-hand-left"></i>
+							<p>专业服务 五星接待</p>
+						</li>
+						<li>
+							<i class="glyphicon glyphicon-heart"></i>
+							<p>放心品质 非诚勿扰</p>
+						</li>
+						<li>
+							<a href=""><img src="img/calculator.png"></a>
+							<p>房贷计算器</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 加载更多 -->
+			<div class="show_more text-center">
+				显示更多>>
+			</div>
+			<!-- 图片广告 卖房 -->
+			<div class="sell text-center">
+				<a href="sell.html"><img src="img/sell.jpg"></a>
+			</div>
+		</div>
+
+	</section>
+	<!-- / Content -->
+	<hr>
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="container">
+			<div class="footer_all">
+				<div class="footer_up text-center">
+					<a href="">关于我们 |</a>
+					<a href="">&nbsp;联系我们 |</a>
+					<a href="javascript:void(0);" data-target="other_city">&nbsp;其它城市</a>
+				</div>
+				<div class="text-center">
+					新乡学院 计算机与信息工程学院 计算机科学与技术专业 俞嘉婷 
+				</div>
+				<div class="footer_botm text-center">
+					手机：157-3691-8985 微信：13221710327 邮箱：1767039461@qq.com
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- / Footer -->
+	<!-- SideBar -->
+	<section id="sideBar">
+		<ul>
+			<!-- 浏览记录 -->
+			<li>
+				<a class="history" href="user.html#sixth" target="_blank">
+					<div class="txt">浏览记录</div>
+					<i class="glyphicon glyphicon-time"></i>
+				</a>
+			</li>
+			<!-- 您的建议 -->
+			<li>
+				<a class="advice" href="#" type="button" data-toggle="modal" data-target="#adviceModal">
+					<div class="txt">您的建议</div>
+					<i class="glyphicon glyphicon-pencil"></i>
+				</a>
+			</li>
+			<!-- 收藏房源 -->
+			<li>
+				<a class="like" href="user.html#fifth" target="_blank">
+					<div class="txt">收藏房源</div>
+					<i class="glyphicon glyphicon-heart"></i>
+				</a>
+			</li>
+			<!-- 回到顶部 -->
+			<li>
+				<a class="goBack" href="#">
+					<div class="txt">回到顶部</div>
+					<i class="glyphicon glyphicon-menu-up"></i>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- / SideBar -->
+	<!-- 您的建议 模态框 -->
+	<div class="modal fade" id="adviceModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">您的建议</h4>
+				</div>
+				<div class="modal-body">
+					<div class="advice-txt">
+						<textarea class="col-sm-12" placeholder="请输入您对我们系统的建议"></textarea>
+					</div>
+					<div class="clearfix">
+						<p class="num-tips pull-right">还可以输入<i>200</i>个字</p>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">提交</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<!-- / 您的建议 模态框 -->
+</body>
+</html>
+<script type="text/javascript" src="lib/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/CITIES.js"></script>
+<script type="text/javascript" src="js/index.js"></script>

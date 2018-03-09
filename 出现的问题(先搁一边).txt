@@ -1,0 +1,91 @@
+1.轮播图的 两个按键不能用
+	错误原因 指示器的data-target属性和控制器的href属性
+			 的值必须和总轮播图的id值一致。
+2.按如下 表单点击时 默认的蓝色边框 无法取消
+	a,input,button:active,
+	input:focus,
+	.btn:focus,
+	.btn:active:focus,
+	.btn.active:focus,
+	.btn.focus,
+	.btn:active.focus,
+	.btn.active.focus {
+		outline: none;
+		border-color: transparent;
+		box-shadow:none;
+	}
+3.CSS3中 :nth-child(n) 不是加在父元素上面 并且是从1开始计数 不是0！
+4.二手房页面 查询结果-详细信息 小竖线 已完成
+5.使用bind或者click,这只能为页面已经加载好的元素绑定事件。
+    为动态添加的元素绑定事件的方式：(注意参数的位置)
+    delegate()  $(selector).delegate(childSelector,event,data,function)
+    live()  $(selector).live(event,data,function)
+    on()    $(selector).on(event,childSelector,data,function,map)//一定要把动态添加的元素放到on()方法里面才行。
+
+/**
+ * 未实现:
+ * 使用HTML5地理位置定位到城市的方法及注意事项
+ *
+ * 利用HTML5 提供的API获取到用户的经纬度信息，再将用户的经纬度信息传到百度
+ * 地图开放平台，百度地图开放平台根据提供的坐标信息返回当前的省市。
+ */
+
+/**
+ * 未实现:
+ * 详情页面：图片轮播中 鼠标经过 有放大镜的效果
+ */
+
+
+/**
+ * 省市拼音排序
+ */
+function pySegSort(arr, empty) {
+    if(!String.prototype.localeCompare)
+        return null;
+    var letters = "*ABCDEFGHJKLMNOPQRSTWXYZ".split('');
+    var zh = "阿八嚓哒妸发旮哈讥咔垃痳拏噢妑七呥扨它穵夕丫帀".split('');
+    var segs = [];// 存放数据
+    var py = [];// 存放首字母
+    var res = {};
+    var curr;
+    $.each(letters, function(i) {
+        curr = {
+            letter: this,
+            data: []
+        };
+        $.each(arr, function(k, v) {
+            if((!zh[i - 1] || zh[i - 1].localeCompare(v.cityName) <= 0) && v.cityName.localeCompare(zh[i]) == -1) {
+                curr.data.push(this);
+            }
+        });
+        if(empty || curr.data.length) {
+            py.push(this);
+            segs.push(curr);
+            curr.data.sort(function(a, b) {
+
+                return a.cityName.localeCompare(b.cityName);
+            });
+        }
+    });
+    res["segs"] = segs;
+    res["py"] = py;
+    return res;
+}
+
+/**
+ * 调用排序
+ */
+function pinyin() {
+    var arr2 = [
+                    {"id" : "v1", "cityName" : "北京"},
+                    {"id" : "v2", "cityName" : "上海"},
+                    {"id" : "v5", "cityName" : "天津"},
+                    {"id" : "v7", "cityName" : "安徽"},
+                    {"id" : "v3", "cityName" : "呼和浩特"},
+                    {"id" : "v4", "cityName" : "包头"},
+                    {"id" : "v9", "cityName" : "海南"},
+                    {"id" : "v8", "cityName" : "张家口"}
+                ];
+    var str = pySegSort(arr2);
+    JSON.stringify(str);
+}
